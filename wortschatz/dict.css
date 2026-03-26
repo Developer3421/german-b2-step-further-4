@@ -1,0 +1,123 @@
+/* ========================================================
+   Deutsch B2 – Wortschatz: dictionary-specific styles
+   Extends the parent style.css (../style.css)
+   ======================================================== */
+
+/* ---------- Dictionary table ---------- */
+.dict-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+
+.dict-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .93rem;
+}
+
+.dict-table thead th {
+  background: rgba(124,58,237,0.25);
+  color: var(--orange-light);
+  font-weight: 700;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: .65rem 1rem;
+  border-bottom: 2px solid rgba(124,58,237,0.5);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dict-table tbody tr {
+  border-bottom: 1px solid rgba(124,58,237,0.18);
+  transition: background var(--transition);
+}
+
+.dict-table tbody tr:last-child { border-bottom: none; }
+
+.dict-table tbody tr:hover {
+  background: rgba(124,58,237,0.08);
+}
+
+.dict-table tbody td {
+  padding: .6rem 1rem;
+  vertical-align: top;
+  color: var(--text-muted);
+}
+
+.dict-table tbody td:first-child {
+  color: var(--orange-light);
+  font-weight: 600;
+}
+
+.dict-table .article {
+  color: var(--purple-light);
+  font-style: italic;
+}
+
+/* ---------- Empty-state placeholder ---------- */
+.dict-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(196,181,212,0.4);
+  font-size: .9rem;
+  font-style: italic;
+  border: 1px dashed rgba(124,58,237,0.3);
+  border-radius: var(--radius);
+}
+
+.dict-empty svg {
+  display: block;
+  margin: 0 auto .75rem;
+  opacity: .35;
+}
+
+/* ---------- Section category label ---------- */
+.dict-category {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--purple-light);
+  margin-bottom: .75rem;
+}
+
+.dict-category::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(124,58,237,0.25);
+}
+
+/* ---------- Word count badge ---------- */
+.word-count {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.35);
+  color: var(--purple-light);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .25rem .7rem;
+  border-radius: 999px;
+}
+
+/* ---------- Search hint strip ---------- */
+.search-hint {
+  background: rgba(249,115,22,0.08);
+  border: 1px solid rgba(249,115,22,0.25);
+  border-radius: var(--radius);
+  padding: .75rem 1.2rem;
+  font-size: .88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.search-hint span { color: var(--orange-light); font-weight: 600; }
